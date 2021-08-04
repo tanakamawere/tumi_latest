@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.dashboard2.FragmentHome">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationViewMain"
+        android:layout_below="@+id/appBarDashboard"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/standard_10">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_10"
+                    app:cardBackgroundColor="@color/colorGrayBackground"
+                    app:cardCornerRadius="@dimen/standard_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_10"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/totalProfitHomeDisplay"
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/standard_10"
+                            android:text="@string/moneyValuesPlaceHolder"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/textBigSize" />
+
+                        <TextView
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/standard_10"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Estimated Gross Profit"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerPlusSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/standard_1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Showing for Today"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerTextSize" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ProgressBar
+                    android:id="@+id/dashboardProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/standard_5">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/standard_160"
+                        android:layout_height="@dimen/standard_200"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/dashboard_info_bg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="@dimen/standard_10"
+                            app:cardBackgroundColor="@color/colorGrayIcon"
+                            app:cardCornerRadius="@dimen/standard_10"
+                            app:cardElevation="@dimen/standard_10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/standard_5"
+                                android:src="@drawable/ic_baseline_monetization_on_24" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardView1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/standard_10"
+                            android:text="Finances"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerPlusSize" />
+
+                        <LinearLayout
+                            android:id="@+id/salesLinLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/standard_20"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Sales: "
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/headerTextSize" />
+
+                            <TextView
+                                android:id="@+id/totalSalesHomeDisplay"
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/moneyValuesPlaceHolder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/headerTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/salesLinLay"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/standard_20"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="@string/expenses"
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/headerTextSize" />
+
+                            <TextView
+                                android:id="@+id/totalExpensesHomeDisplay"
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/moneyValuesPlaceHolder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/headerTextSize" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/goToFinances"
+                            style="@style/BorderlessButtons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Open Finances" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/standard_160"
+                        android:layout_height="@dimen/standard_200"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/dashboard_info_bg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="@dimen/standard_10"
+                            app:cardBackgroundColor="@color/colorGrayIcon"
+                            app:cardCornerRadius="@dimen/standard_10"
+                            app:cardElevation="@dimen/standard_10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/standard_5"
+                                android:src="@drawable/ic_baseline_stock_24" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardView2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/standard_10"
+                            android:text="Stock"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerPlusSize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/standard_20"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="@string/total_stock"
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/headerTextSize" />
+
+                            <TextView
+                                android:id="@+id/totalStockHomeDisplay"
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/moneyValuesPlaceHolder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/headerTextSize" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/goToStock"
+                            style="@style/BorderlessButtons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Open Stock" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/standard_160"
+                        android:layout_height="@dimen/standard_200"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/dashboard_info_bg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="@dimen/standard_10"
+                            app:cardBackgroundColor="@color/colorGrayIcon"
+                            app:cardCornerRadius="@dimen/standard_10"
+                            app:cardElevation="@dimen/standard_10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/standard_5"
+                                android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardView4"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/standard_10"
+                            android:text="Money"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerPlusSize" />
+
+                        <LinearLayout
+                            android:id="@+id/salesLinLay98"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/standard_20"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Debts: "
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/headerTextSize" />
+
+                            <TextView
+                                android:id="@+id/totalDebtsHomeDisplay"
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/moneyValuesPlaceHolder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/headerTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/salesLinLay98"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/standard_20"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="@string/fbCredits"
+                                android:textColor="@color/colorLightBlue"
+                                android:textSize="@dimen/headerTextSize" />
+
+                            <TextView
+                                android:id="@+id/totalCreditDisplay"
+                                style="@style/NormalTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/moneyValuesPlaceHolder"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/headerTextSize" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/goToMoney"
+                            style="@style/BorderlessButtons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Open Money" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/standard_160"
+                        android:layout_height="@dimen/standard_200"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/dashboard_info_bg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_margin="@dimen/standard_10"
+                            app:cardBackgroundColor="@color/colorGrayIcon"
+                            app:cardCornerRadius="@dimen/standard_10"
+                            app:cardElevation="@dimen/standard_10">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/standard_5"
+                                android:src="@drawable/ic_baseline_insert_emoticon_24" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/NormalTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardView3"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/standard_10"
+                            android:text="Customers"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerPlusSize" />
+
+                        <Button
+                            android:id="@+id/goToCustomers"
+                            style="@style/BorderlessButtons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Open Customers" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dashboardStatsHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_10"
+                    android:layout_marginTop="@dimen/standard_10"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/all_time_statistics"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <TextView
+                    android:id="@+id/dashboardStatsDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_10"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/showing_for"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_5"
+                    android:layout_marginEnd="@dimen/standard_5"
+                    android:layout_marginBottom="@dimen/standard_5"
+                    android:background="@drawable/dashboard_info_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_5"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/statsProfitDashboard"
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/moneyValuesPlaceHolder"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Estimated Net Profit"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/headerTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_5"
+                    android:layout_marginEnd="@dimen/standard_5"
+                    android:layout_marginBottom="@dimen/standard_5"
+                    android:background="@drawable/dashboard_info_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_5"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/salesDashboardStatsTextView"
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/moneyValuesPlaceHolder"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Sales"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/headerTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_5"
+                    android:layout_marginEnd="@dimen/standard_5"
+                    android:layout_marginBottom="@dimen/standard_5"
+                    android:background="@drawable/dashboard_info_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_5"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/expensesDashboardStatsTextView"
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/moneyValuesPlaceHolder"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        style="@style/NormalTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/fbExpenses"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/headerTextSize" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomBar"
+        layout="@layout/bottom_navigation_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

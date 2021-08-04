@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutStock"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".Stock.StockActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarStock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayBackground"
+            app:title="">
+
+            <TextView
+                style="@style/ToolbarTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Record Expenses"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/standard_12"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="If the drop down menu is empty, create a new Expense type below"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/headerTextSize" />
+
+    <Button
+        android:id="@+id/recordNewExpenseTypeBtn"
+        style="@style/BorderlessButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Create expense category"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/headerTextSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/standard_12"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Select an expense"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/headerTextSize" />
+
+    <Spinner
+        android:id="@+id/expenseSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_20"
+        android:layout_marginEnd="@dimen/standard_20"
+        android:layout_marginBottom="@dimen/standard_20"
+        android:padding="@dimen/standard_5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:suffixText="USD"
+        app:suffixTextColor="@color/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/recordExpenseAmountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/normalTextSize" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/recordExpenseBtn"
+        style="@style/NormalTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/standard_20"
+        android:background="@drawable/button_blue_primary"
+        android:text="@string/button_string_confirm"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

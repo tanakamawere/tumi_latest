@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentNotifications22"
+        android:name="org.tmz.tumi.Main.dashboard2.FragmentNotifications2"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications2">
+        <action
+            android:id="@+id/action_fragmentNotifications22_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="org.tmz.tumi.Main.dashboard2.FragmentHome"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentNotifications22"
+            app:destination="@id/fragmentNotifications22" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentMessageList"
+            app:destination="@id/fragmentMessageList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMessageList"
+        android:name="org.tmz.tumi.Main.dashboard2.FragmentMessageList"
+        android:label="Messages"
+        tools:layout="@layout/fragment_message_list">
+        <action
+            android:id="@+id/action_fragmentMessageList_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+</navigation>

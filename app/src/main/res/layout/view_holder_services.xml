@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewHolderStock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/standard_1"
+    android:layout_marginEnd="@dimen/standard_1"
+    android:layout_marginBottom="@dimen/standard_1"
+    app:cardBackgroundColor="@color/colorBackground"
+    app:cardCornerRadius="@dimen/standard_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/postVHProfilePicture"
+                android:layout_width="@dimen/standard_40"
+                android:layout_height="@dimen/standard_40"
+                android:layout_margin="@dimen/standard_10"
+                android:src="@drawable/profile_avatar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/postVHProfilePicture"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/servicesVHNameTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/full_name"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/servicesVHServiceTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/services"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/servicesVHOptionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_10"
+                android:background="@drawable/ic_baseline_more_vert_24"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/servicesVHDescriptionTextView"
+            style="@style/NormalTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_10"
+            android:text="@string/description"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/servicesVHCommentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/standard_10"
+                android:background="@drawable/ic_baseline_comment_24"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/servicesVHCommentNumberTextView"
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/servicesVHCommentButton"
+                android:text="@string/_0_comments"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/servicesVHRatingTextView"
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/servicesVHStarButton"
+                android:text="4.5"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:id="@+id/servicesVHStarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/standard_10"
+                android:background="@drawable/ic_baseline_star_yellow_24"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

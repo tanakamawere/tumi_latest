@@ -1,0 +1,304 @@
+<resources>
+    <string name="app_name">Tumi</string>
+    <string name="appName">tumi</string>
+    <string name="appNameSubtext">Business</string>
+    <string name="signIn">Sign In</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="signUp">Sign Up</string>
+    <string name="password">Password</string>
+
+    <!--FinancesActivity-->
+    <string name="title_activity_finances">FinancesActivity</string>
+    <string name="tab_text_1">Sales</string>
+    <string name="tab_text_2">Expenses</string>
+    <string name="log_out">Log Out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Error Messages-->
+    <string name="PossibleErrorsInfo">1. Check your network connection.\n2. The email address you used might already be in our database.\n3.If the problem persists, please contact us.</string>
+    <string name="Header2CreateAccountError">Here\'s a few reasons why you might not have been \nto create an account.\n</string>
+    <string name="Header1CreateAccountError">Oops, a bit of a niggle there.</string>
+    <string name="noInternetMessage">Seems like there\'s no available internet connection.</string>
+    <string name="nothingInStock">Oops, seems like you don\'t have anything in stock.</string>
+    <string name="press_this_button_to_add_something">Press this button to add something</string>
+
+    <string name="joinedOn">Joined </string>
+    <string name="editAccountInfo">Edit Account Info</string>
+    <string name="selectProduct">Select product</string>
+    <string name="moneyValuesPlaceHolder">--.--</string>
+    <string name="toolTipNewExpenseType">Eg rent, salary</string>
+    <string name="spinnerTitle">Select Expense</string>
+    <string name="currencyIdentifier">$</string>
+    <string name="builderConfirmDetails">Are you sure details are correct?</string>
+
+    <string name="searchHint">Search…</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="settings">Settings</string>
+    <!--ViewHolder InfoHolders-->
+    <string name="pricePerUnit">Price per unit-</string>
+    <string name="totalPrice">Total-</string>
+    <string name="quantity">Quantity-</string>
+
+    <!--Intent extras-->
+    <string name="selectedImage">selectedImage</string>
+    <string name="selectedBitmap">selectedBitmap</string>
+    <string name="comingFromAd">comingFromAd</string>
+    <string name="comingFromAccount">comingFromAccount</string>
+    <string name="comingFromWhere">comingFromWhere</string>
+    <string name="selectedStockExtra">selectedStockExtra</string>
+
+    <!--Bundle Extras-->
+    <string name="selectedStockAd">selectedStockAd</string>
+    <string name="selectedStockParcelable">selectedStockParcelable</string>
+    <string name="selectedProductGridView">selectedProductGridView</string>
+    <string name="selectedSaleReceipt">selectedSaleReceipt</string>
+    <string name="selectedBusiness">selectedBusiness</string>
+    <string name="selectedService">selectedService</string>
+    <string name="moneyType">moneyType</string>
+    <string name="type">Type</string>
+    <string name="fromWhere">fromWhere</string>
+    <string name="settingsFragment">settingsFragment</string>
+    <string name="changeEmailAddress">changeEmailAddress</string>
+    <string name="deleteAccount">deleteAccount</string>
+    <string name="aboutWhat">aboutWhat</string>
+    <string name="changePasswordBundle">changePassword</string>
+    <string name="signInFragment">signInFragment</string>
+    <string name="stockAdvertise">stockAdvertise</string>
+    <string name="selectedPictureAdvertise">selectedPictureAdvertise</string>
+    <string name="fragmentNewProduct">fragmentNewProduct</string>
+    <string name="fragmentEditProduct">fragmentEditProduct</string>
+    <string name="fragmentSelectedStock">fragmentSelectedStock</string>
+    <string name="bundleNull">bundleNull</string>
+    <string name="weeklyBackUpExtraText">Weekly stats back up: </string>
+    <string name="fragmentViewER">fragmentViewER</string>
+    <string name="fragmentSetER">fragmentSetER</string>
+
+    <!--App Colors-->
+    <string name="darkTheme">Dark</string>
+    <string name="lightTheme">Light</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!--Start Slides Messages-->
+    <string name="sliderInfoText1">Dump all those books and papers\n in the bin.\n\nManage your business easily on your phone.</string>
+    <string name="sliderInfo2">Whether you\'re selling\n or offering a service\nlike a hairdresser,\n\n Tumi can manage it all.</string>
+    <string name="sliderInfoText2">Manage your inventory and keep track of your sales and expenses.</string>
+    <string name="sliderText3">Whether you\'re selling or offering a service\n\n Make sure your hustle is making you a profit!</string>
+
+    <string name="title_activity_customers">CustomersActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="personal">Personal</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="motto">Motto</string>
+    <string name="position_in_business">Position in Business</string>
+    <string name="button_string_confirm">Confirm</string>
+    <string name="details">Overall Details</string>
+    <string name="expenses">Expenses</string>
+    <string name="total_stock">Total Stock</string>
+    <string name="credit">Credit</string>
+    <string name="amount">Amount</string>
+    <string name="category">Category</string>
+    <string name="create_expense_category">Create expense category</string>
+    <string name="share">Share</string>
+
+    <!--Strings for Account-->
+    <string name="advert_long">Advertisements</string>
+    <string name="tab_account_1">Details</string>
+    <string name="tab_account_2">Ads</string>
+    <string name="account">Account</string>
+    <string name="explore">Explore</string>
+    <string name="products">Products</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="landing">Landing</string>
+    <string name="changePassword">Change Password</string>
+    <string name="changeEmail">Change Email Address</string>
+
+    <!--ExploreActivity-->
+    <string name="tab_explore_1">Products</string>
+    <string name="tab_explore_2">Requests</string>
+    <string name="tab_explore_3">You</string>
+
+    <!--Picture Activity-->
+    <string name="tab_picture_1">Gallery</string>
+    <string name="tab_picture_2">Camera</string>
+    <!--You Activity-->
+    <string name="tab_you_1">You</string>
+    <string name="tab_you_2">Starred</string>
+
+    <!--SaleCart Activity-->
+    <string name="checkout">Checkout</string>
+    <string name="add_customer_details_optional">Add customer details (Optional)</string>
+    <string name="sale_cart">Sale Cart</string>
+    <string name="cart">Cart</string>
+    <string name="options">Options</string>
+    <string name="story_description_help">If you\'re looking for anything, maybe a job or someone who sells something, post it on Ping.
+        this will be displayed to other users who will Ping your post and you\'ll be able to link with them. \n\n
+        Try it.</string>
+    <string name="post">Post</string>
+    <string name="stock">Stock</string>
+
+    <!--Firebase Children-->
+    <string name="fbStarredAdvertisements">Starred Advertisements</string>
+    <string name="fbAdvertisements">Advertisements</string>
+    <string name="fbBusinesses">Businesses</string>
+    <string name="fbExplore">Explore</string>
+    <string name="fbExpenses">Expenses</string>
+    <string name="fbTumiInfo">Tumi Information</string>
+    <string name="fbUserInfo">User Information</string>
+    <string name="fbUsers">Users</string>
+    <string name="fbBusinessInfo">Business Information</string>
+    <string name="fbStock">Stock</string>
+    <string name="fbFinances">Finances</string>
+    <string name="fbSales">Sales</string>
+    <string name="fbSalesDetails">Sale Details</string>
+    <string name="fbDebts">Debts</string>
+    <string name="fbStatistics">Statistics</string>
+    <string name="fbCredits">Credits</string>
+    <string name="fbDebtsType">Debt (Money you owe)</string>
+    <string name="fbCreditsType">Credit (Money you are owed)</string>
+    <string name="fbMoney">Money</string>
+    <string name="fbNotifications">Notifications</string>
+    <string name="fragment_two_info">This information helps give
+        other users an insight into your business, should you choose to advertise and make your business public.</string>
+    <string name="description">Description</string>
+
+    <!--Notifications Keys-->
+    <string name="lowStock">Low Stock</string>
+    <string name="whatsAppClicked">WhatsApp Clicked</string>
+    <string name="phoneNumberClicked">Phone Number Clicked</string>
+
+    <!--Dialog Strings-->
+    <string name="pdUploading">Uploading</string>
+    <string name="pdPleaseWait">Please wait…</string>
+    <string name="options_thing">⋮</string>
+    <!--Requests dialog-->
+    <string name="whatDoYouWant">What do you want to do?</string>
+    <string name="callRequester">Call requester</string>
+    <string name="whatsAppRequester">WhatsApp requester</string>
+    <string name="report">Report</string>
+    <string name="complaintsReply">Your complaint has been sent and will be reviewed shortly</string>
+
+    <string name="services">Services</string>
+    <string name="requests">Requests</string>
+
+    <!--Transitions-->
+    <string name="transitionProfilePicture">transitionProfilePicture</string>
+    <string name="logoTransition">logoTransition</string>
+
+    <!--Arrays-->
+    <!--Week end date-->
+    <string name="fridayLabel">Friday</string>
+    <string name="saturdayLabel">Saturday</string>
+    <string name="sundayLabel">Sunday</string>
+
+    <string name="fridayValue">fridayValue</string>
+    <string name="saturdayValue">saturdayValue</string>
+    <string name="sundayValue">sundayValue</string>
+    <!--Dashboard spinner-->
+    <string name="dashboardDateSpinner">dashboardDateSpinner</string>
+    <string name="today">Today</string>
+    <string name="allTime">All Time</string>
+    <!--Currency-->
+    <string name="defaultCurrencyLabel">$ (Tumi Default)</string>
+    <string name="usdLabel">USD$\u0020</string>
+    <string name="randLabel">Rands\u0020</string>
+    <string name="randsZARLabel">ZAR\u0020</string>
+    <string name="currencyTitle">$\u0020</string>
+    <string name="zwlLabel">ZWL$\u0020</string>
+
+    <string name="fbUsd">USD</string>
+    <string name="fbRand">Rand</string>
+    <string name="fbZwl">ZWL</string>
+    <string name="fbTumiDefault">TumiDefault</string>
+    <string name="tumiProvidedRate">Tumi Provided</string>
+    <string name="userProvidedRate">User Provided</string>
+    <string name="fbInterbank">Interbank</string>
+    <string name="fbBlackMarket">Black Market</string>
+    <string name="fbMessages">Messages</string>
+    <string name="fbMessagesDetails">Messages Details</string>
+    <string name="fbMessagesNode">Messages Node</string>
+    <string name="fbSent">Sent</string>
+    <string name="fbServices">Services</string>
+    <string name="fbReceived">Received</string>
+    <string name="sendMessage">Send Message</string>
+
+    <string name="defaultCurrencyValue">defaultCurrencyValue</string>
+    <string name="usdValue">usdValue</string>
+    <string name="randValue">randValue</string>
+    <string name="zwlValue">zwlValue</string>
+    <!--Exchange Rate-->
+    <string name="interBankExchangeRateValue">interBankExchangeRateValue</string>
+    <string name="blackMarketExchangeRateValue">blackMarketExchangeRateValue</string>
+
+    <string name="interBankExchangeRateLabel">InterBank</string>
+    <string name="blackMarketExchangeRateLabel">Black Market</string>
+
+    <!--Preference Keys-->
+    <string name="daySelectedPreferences">daySelectedPreferences</string>
+    <string name="weekEndDate">weekEndDate</string>
+    <string name="businessTypeSelection">businessTypeSelection</string>
+    <string name="currencySelected">currencySelected</string>
+    <string name="enableCurrencyConversion">enableCurrencyConversion</string>
+    <string name="enablePublicBusiness">enablePublicBusiness</string>
+    <string name="setExchangeRates">setExchangeRates</string>
+    <string name="viewExchangeRates">viewExchangeRates</string>
+
+    <string name="sharedPreferences">sharedPreferences</string>
+    <string name="isDarkModeOn">isDarkModeOn</string>
+    <string name="selectedCurrency">selectedCurrency</string>
+    <string name="resetSavedData">resetSavedData</string>
+    <string name="enableSelfRate">enableSelfRate</string>
+    <string name="exchangeRate">exchangeRate</string>
+    <string name="fbCurrency">Currency</string>
+    <string name="sharedPrefRate">sharedPrefRate</string>
+    <string name="sharedPrefTitle">sharedPrefTitle</string>
+
+    <string name="dashboardActivity">dashboardActivity</string>
+    <string name="exploreActivity">exploreActivity</string>
+    <string name="searchAll">All</string>
+    <string name="businesses">Businesses</string>
+    <string name="credibility">Credibility</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="showing_for">Showing for:</string>
+    <string name="all_time_statistics">All Time Statistics</string>
+    <string name="advertisements">Advertisements</string>
+    <string name="starred_products">Starred Products</string>
+    <string name="list_as_a_service">List as a service</string>
+    <string name="add_service">Add Service</string>
+    <string name="select_your_service">Select your service</string>
+    <string name="add_a_description">Add a Description</string>
+    <string name="editInfoText">If your business is set to public, these are the details that show.</string>
+
+    <!--Business Type Strings-->
+    <string name="bothLabel">Both</string>
+    <string name="retailLabel">Retail</string>
+    <string name="serviceLabel">Service</string>
+    <string name="bothValue">both</string>
+    <string name="retailValue">retail</string>
+    <string name="serviceValue">service</string>
+    <string name="no_services_yet">No services yet.</string>
+    <string name="_0_comments">0 comments</string>
+    <string name="comments">Comments</string>
+    <string name="fbComments">Comments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="you">You</string>
+    <string name="person_1">Person 1</string>
+    <string name="explore_options">Explore Options</string>
+    <string name="your_profile">Your Profile</string>
+
+</resources>

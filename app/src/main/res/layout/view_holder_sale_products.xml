@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewHolderStock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standard_1"
+    app:cardBackgroundColor="@color/colorBackground"
+    app:cardCornerRadius="@dimen/standard_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/standard_10"
+            android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_10"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/standard_10"
+            android:paddingBottom="@dimen/standard_10">
+
+            <TextView
+                android:id="@+id/recordSaleTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Mafel Peanut Butter Case"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+            <TextView
+                android:id="@+id/recordSaleQuantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="78 items"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewHolderStock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/standard_1"
+    android:layout_marginEnd="@dimen/standard_1"
+    android:layout_marginBottom="@dimen/standard_1"
+    app:cardBackgroundColor="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <org.tmz.tumi.Utils.SquareImageView
+            android:id="@+id/viewHolderImage"
+            android:layout_width="@dimen/standard_60"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_10"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/productTitleViewHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/standard_20"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Display Name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerPlusSize" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

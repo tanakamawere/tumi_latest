@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standard_5"
+    android:background="@color/colorBackground"
+    app:cardElevation="@dimen/standard_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/standard_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pingShowTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/pingShowDescriptionTextView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/standard_10"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Title"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <TextView
+                    android:id="@+id/pingShowDescriptionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/standard_10"
+                    android:layout_marginBottom="@dimen/standard_5"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Description"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalTextSize" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_1"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/pingShowBodyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxHeight="@dimen/standard_120"
+            android:scrollbars="vertical"
+            android:text="Body"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_1"
+            android:background="@color/colorGray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_1">
+
+            <TextView
+                android:id="@+id/pingShowTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Time"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+            <TextView
+                android:id="@+id/pingShowDateTextView"
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_5"
+                android:layout_toEndOf="@+id/pingShowTimeTextView"
+                android:text="Date"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayBackground">
+
+            <TextView
+                android:id="@+id/pingShowWriterTextView"
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/standard_5"
+                android:text="Writer"
+                android:textColor="@color/colorPrimary" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_red_primary">
+
+                <ImageButton
+                    android:id="@+id/deleteRequestButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_12"
+                    android:background="@drawable/ic_baseline_delete_24"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

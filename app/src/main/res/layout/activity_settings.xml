@@ -1,0 +1,80 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayoutSettingsMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/settingProfilePicture"
+                android:layout_width="@dimen/standard_80"
+                android:layout_height="@dimen/standard_80"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_10"
+                android:src="@drawable/profile_avatar"
+                android:transitionName="@string/transitionProfilePicture"
+                app:civ_border_color="@color/colorGray"
+                app:civ_border_width="@dimen/standard_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/usernameSettingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="John Doe"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/textBigSize" />
+
+                <TextView
+                    android:id="@+id/businessNameSettingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Example"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerPlusSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Click to see more..."
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/normalTextSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_1"
+            android:layout_margin="@dimen/standard_5"
+            android:background="@color/colorGray" />
+
+        <FrameLayout
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

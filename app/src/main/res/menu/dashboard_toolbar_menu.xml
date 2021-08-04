@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuNotificationToolbar"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="@string/fbNotifications"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuMessagesToolbar"
+        android:icon="@drawable/ic_baseline_message_24"
+        android:title="@string/fbMessages"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuSettingsToolbar"
+        android:icon="@drawable/ic_baseline_settings_gray_24"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom" />
+</menu>

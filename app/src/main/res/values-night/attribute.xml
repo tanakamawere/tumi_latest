@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="primaryTitleColor" format="color" />
+    <attr name="colorBackground" format="color" />
+    <attr name="colorGray" format="color" />
+    <attr name="colorGrayBackground" format="color" />
+    <attr name="colorGrayIcon" format="color" />
+
+    <color name="colorPrimaryNight">#16202C</color>
+    <color name="colorPrimaryDarkNight">#141D26</color>
+    <color name="colorAccentNight">#FFF</color>
+    <color name="colorBackground">#16202C</color>
+
+    <color name="primaryTitleColor">#212121</color>
+    <color name="primaryTitleColorNight">#FFF</color>
+
+</resources>

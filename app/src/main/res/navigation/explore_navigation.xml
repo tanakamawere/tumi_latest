@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/explore_navigation"
+    app:startDestination="@id/fragmentExplore2">
+
+    <fragment
+        android:id="@+id/fragmentExplore2"
+        android:name="org.tmz.tumi.Main.Explore.FragmentExplore"
+        android:label="@string/fbExplore"
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_fragmentExplore2_to_fragmentRequests"
+            app:destination="@id/fragmentRequests" />
+        <action
+            android:id="@+id/action_fragmentExplore2_to_fragmentViewAd"
+            app:destination="@id/fragmentViewAd" />
+        <action
+            android:id="@+id/action_fragmentExplore2_to_fragmentViewBusiness"
+            app:destination="@id/fragmentViewBusiness" />
+        <action
+            android:id="@+id/action_fragmentExplore2_to_MBNavigationExplore"
+            app:destination="@id/MBNavigationExplore" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentServices"
+        android:name="org.tmz.tumi.Main.Explore.FragmentServices"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_services">
+        <action
+            android:id="@+id/action_fragmentServices_to_MBNavigationExplore"
+            app:destination="@id/MBNavigationExplore" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRequests"
+        android:name="org.tmz.tumi.Main.Explore.FragmentRequests"
+        android:label="@string/requests"
+        tools:layout="@layout/fragment_requests">
+        <action
+            android:id="@+id/action_fragmentRequests_to_fragmentExplore2"
+            app:destination="@id/fragmentExplore2" />
+        <action
+            android:id="@+id/action_fragmentRequests_to_fragmentWriteRequest"
+            app:destination="@id/fragmentWriteRequest" />
+        <action
+            android:id="@+id/action_fragmentRequests_to_fragmentWriteRequest2"
+            app:destination="@id/fragmentWriteRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWriteRequest"
+        android:name="org.tmz.tumi.Main.Explore.FragmentWriteRequest"
+        android:label="Write"
+        tools:layout="@layout/fragment_write_requests">
+        <action
+            android:id="@+id/action_fragmentWriteRequest_to_fragmentRequests"
+            app:destination="@id/fragmentRequests" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentViewAd"
+        android:name="org.tmz.tumi.Main.Explore.FragmentViewAd"
+        android:label="View Product"
+        tools:layout="@layout/fragment_view_ad">
+        <action
+            android:id="@+id/action_fragmentViewAd_to_fragmentExplore2"
+            app:destination="@id/fragmentExplore2" />
+        <action
+            android:id="@+id/action_fragmentViewAd_to_fragmentViewBusiness"
+            app:destination="@id/fragmentViewBusiness" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentViewBusiness"
+        android:name="org.tmz.tumi.Main.Explore.FragmentViewBusiness"
+        android:label="View Business"
+        tools:layout="@layout/fragment_view_business">
+        <action
+            android:id="@+id/action_fragmentViewBusiness_to_fragmentExplore2"
+            app:destination="@id/fragmentExplore2" />
+        <action
+            android:id="@+id/action_fragmentViewBusiness_to_fragmentViewAd"
+            app:destination="@id/fragmentViewAd" />
+    </fragment>
+    <fragment
+        android:id="@+id/MBNavigationExplore"
+        android:name="org.tmz.tumi.CustomDialogs.MBNavigationExplore"
+        android:label="Options"
+        tools:layout="@layout/modal_bottom_navigation_explore">
+        <action
+            android:id="@+id/action_MBNavigationExplore_to_fragmentExplore2"
+            app:destination="@id/fragmentExplore2" />
+        <action
+            android:id="@+id/action_MBNavigationExplore_to_fragmentServices"
+            app:destination="@id/fragmentServices" />
+        <action
+            android:id="@+id/action_MBNavigationExplore_to_fragmentYou"
+            app:destination="@id/fragmentYou" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentYou"
+        android:name="org.tmz.tumi.Main.Explore.FragmentYou"
+        android:label="FragmentYou"
+        tools:layout="@layout/fragment_you">
+        <action
+            android:id="@+id/action_fragmentYou_to_MBNavigationExplore"
+            app:destination="@id/MBNavigationExplore" />
+    </fragment>
+</navigation>

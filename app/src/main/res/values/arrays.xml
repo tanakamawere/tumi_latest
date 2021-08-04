@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Dates for stats back-up-->
+    <array name="pref_week_end_date_labels">
+        <item>@string/fridayLabel</item>
+        <item>@string/saturdayLabel</item>
+        <item>@string/sundayLabel</item>
+    </array>
+    <array name="pref_week_end_date_values">
+        <item>@string/fridayValue</item>
+        <item>@string/saturdayValue</item>
+        <item>@string/sundayValue</item>
+    </array>
+
+    <!--Business Type Selections-->
+    <array name="business_type_labels">
+        <item>@string/bothLabel</item>
+        <item>@string/retailLabel</item>
+        <item>@string/serviceLabel</item>
+    </array>
+    <array name="business_type_values">
+        <item>@string/bothValue</item>
+        <item>@string/retailValue</item>
+        <item>@string/serviceValue</item>
+    </array>
+
+    <!--Currency selection-->
+    <array name="currency_labels">
+        <item>@string/defaultCurrencyLabel</item>
+        <item>@string/usdLabel</item>
+        <item>@string/randLabel</item>
+        <item>@string/zwlLabel</item>
+    </array>
+    <array name="currency_values">
+        <item>@string/defaultCurrencyValue</item>
+        <item>@string/usdValue</item>
+        <item>@string/randValue</item>
+        <item>@string/zwlValue</item>
+    </array>
+    <!--Exchange Rate selection-->
+    <array name="exchange_rate_labels">
+        <item>@string/interBankExchangeRateLabel</item>
+        <item>@string/blackMarketExchangeRateLabel</item>
+    </array>
+    <array name="exchange_rate_values">
+        <item>@string/interBankExchangeRateValue</item>
+        <item>@string/blackMarketExchangeRateValue</item>
+    </array>
+
+
+    <array name="dashboard_date_selection">
+        <item>@string/today</item>
+        <item>@string/allTime</item>
+    </array>
+
+</resources>

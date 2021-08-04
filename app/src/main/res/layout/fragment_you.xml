@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarYouProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/exploreToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            app:title="">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/youBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_baseline_arrow_back_24"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/youToolbarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/youBackButton"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="You"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/giantTextSize" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBarYouProfile"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutYouProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/youProfilePicture"
+                    android:layout_width="@dimen/standard_80"
+                    android:layout_height="@dimen/standard_80"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_10"
+                    android:src="@drawable/profile_avatar"
+                    android:transitionName="@string/transitionProfilePicture"
+                    app:civ_border_color="@color/colorGray"
+                    app:civ_border_width="@dimen/standard_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/youRequestsTotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/requests"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        android:id="@+id/youAdvertisementsTotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/advertisements"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        android:id="@+id/youCredibilityTotalTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/credibility"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/starredAdsButton"
+                style="@style/BorderlessButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/starred_products" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_1"
+                android:layout_margin="@dimen/standard_5"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Requests"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewUserRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_1"
+                        android:layout_margin="@dimen/standard_1"
+                        android:background="@color/colorGray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Products"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewUserAds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nothingToShowYouTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nothing to show yet."
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

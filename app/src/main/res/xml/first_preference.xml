@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+
+        <SwitchPreference
+            app:icon="@drawable/ic_baseline_smartphone_24"
+            app:key="theme"
+            app:title="Theme" />
+        <Preference
+            app:icon="@drawable/ic_baseline_person_24"
+            app:key="accountFragment"
+            app:summary="Publicize Business, Currency"
+            app:title="Account" />
+        <Preference
+            app:icon="@drawable/ic_baseline_key_24"
+            app:key="securityFragment"
+            app:summary="Edit Information, Change Password"
+            app:title="Security" />
+        <Preference
+            app:icon="@drawable/ic_baseline_help_24"
+            app:key="helpFragment"
+            app:summary="How to, Privacy Policy, Talk To Us"
+            app:title="Help" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+
+        <Preference
+            app:icon="@drawable/ic_baseline_share_24"
+            app:key="shareFragment"
+            app:summary="QR Code, Download Link"
+            app:title="Share" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_clear_red_24"
+            app:key="logout"
+            app:title="Log out" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

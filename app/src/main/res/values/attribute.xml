@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="primaryTitleColor" format="color" />
+    <attr name="colorBackground" format="color" />
+    <attr name="colorGray" format="color" />
+    <attr name="colorGrayBackground" format="color" />
+    <attr name="colorGrayIcon" format="color" />
+
+</resources>

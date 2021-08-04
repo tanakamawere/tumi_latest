@@ -1,0 +1,49 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkNight</item>
+        <item name="colorAccent">@color/colorAccentNight</item>
+
+        <item name="android:windowBackground">@color/colorPrimaryNight</item>
+        <item name="primaryTitleColor">@color/primaryTitleColorNight</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BottomNavigationTheme">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:textColorSecondary">@color/noneSelectedBottomNav</item>
+        <item name="iconTint">@color/colorPrimary</item>
+
+        <item name="actionOverflowButtonStyle">@style/MyOverflowIcons</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="title">@string/appName</item>
+        <item name="titleTextColor">@color/colorPrimary</item>
+        <item name="backgroundColor">@color/colorBackground</item>
+        <item name="background">@color/colorBackground</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="ToolbarTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/headerPlusSize</item>
+    </style>
+
+    <style name="MyOverflowIcons" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

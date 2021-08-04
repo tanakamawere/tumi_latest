@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pictures.UploadPictureActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarUploadDP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarUploadDP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayBackground"
+            app:elevation="1dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            app:title="Upload Profile Pic" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/uploadProfilePicture"
+        android:layout_width="@dimen/standard_400"
+        android:layout_height="@dimen/standard_400"
+        android:layout_below="@+id/appBarUploadDP"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/uploadDPButton"
+        style="@style/NormalTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadProfilePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_blue_primary"
+        android:text="@string/button_string_confirm" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/fbBusinessInfo"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerTextSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_regular"
+            android:scrollbars="vertical"
+            android:text="@string/fragment_two_info"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_12"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Your business type"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerTextSize" />
+
+        <Spinner
+            android:id="@+id/primaryTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_20"
+            android:layout_marginBottom="@dimen/standard_20"
+            android:padding="@dimen/standard_5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_12"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Your business category"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerTextSize" />
+
+        <Spinner
+            android:id="@+id/primaryCategorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_20"
+            android:layout_marginBottom="@dimen/standard_20"
+            android:padding="@dimen/standard_5" />
+
+        <Button
+            android:id="@+id/saveBusinessTwoInfoButton"
+            style="@style/NormalTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_blue_primary"
+            android:text="@string/button_string_confirm" />
+
+    </LinearLayout>
+
+</ScrollView>

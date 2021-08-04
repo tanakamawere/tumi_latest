@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentDashboard">
+    <fragment
+        android:id="@+id/fragmentSales"
+        android:name="org.tmz.tumi.Finances.main.FragmentSales"
+        android:label="fragment_money"
+        tools:layout="@layout/fragment_money">
+        <action
+            android:id="@+id/action_fragmentSales_to_fragmentDashboard"
+            app:destination="@id/fragmentDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDashboard"
+        android:name="org.tmz.tumi.Main.Dashboard.FragmentDashboard"
+        android:label="FragmentDashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_fragmentDashboard_to_fragmentSales"
+            app:destination="@id/fragmentSales" />
+        <action
+            android:id="@+id/action_fragmentDashboard_to_fragmentMessages"
+            app:destination="@id/fragmentMessages" />
+        <action
+            android:id="@+id/action_fragmentDashboard_to_fragmentNotifications2"
+            app:destination="@id/fragmentNotifications2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMessages"
+        android:name="org.tmz.tumi.Main.Dashboard.FragmentMessages"
+        android:label="FragmentMessages"
+        tools:layout="@layout/fragment_messages">
+        <action
+            android:id="@+id/action_fragmentMessages_to_fragmentDashboard"
+            app:destination="@id/fragmentDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNotifications2"
+        android:name="org.tmz.tumi.Main.Dashboard.FragmentNotifications"
+        android:label="FragmentNotifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_fragmentNotifications2_to_fragmentDashboard"
+            app:destination="@id/fragmentDashboard" />
+    </fragment>
+</navigation>

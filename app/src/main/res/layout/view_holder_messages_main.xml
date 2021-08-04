@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/standard_1"
+    android:layout_marginEnd="@dimen/standard_1"
+    android:layout_marginBottom="@dimen/standard_1"
+    app:cardBackgroundColor="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/MMImageView"
+            android:layout_width="@dimen/standard_60"
+            android:layout_height="@dimen/standard_60"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/standard_10"
+            android:src="@drawable/profile_avatar"
+            android:transitionName="@string/transitionProfilePicture"
+            app:civ_border_color="@color/colorGray"
+            app:civ_border_width="@dimen/standard_1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toEndOf="@+id/MMImageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/MMBusinessNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Business Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headerPlusSize" />
+
+            <TextView
+                android:id="@+id/MMBusinessCategoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Recent Message"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headerTextSize" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/MMOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_10"
+            android:background="@drawable/ic_baseline_more_vert_24"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

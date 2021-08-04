@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            app:title="">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/businessViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_baseline_arrow_back_24"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/viewBusinessTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/appNameSubtext"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerPlusSize" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarViewBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+
+    <ScrollView
+        android:id="@+id/containerViewAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/viewBusinessPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_250"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/road_into_the_distance" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_shade" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/viewBusinessNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="John Doe"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/headerPlusSize" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/standard_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/standard_5"
+                            android:layout_marginEnd="@dimen/standard_5"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:id="@+id/viewBusinessCategoryTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Example"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/headerTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/viewBusinessDescriptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:layout_marginBottom="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Description"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/headerTextSize" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="30">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/standard_20"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="15"
+                    android:background="@drawable/button_blue_primary">
+
+                    <ImageButton
+                        android:id="@+id/viewBusinessCallButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/standard_12"
+                        android:background="@drawable/ic_baseline_phone_white_24"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="15"
+                    android:background="@drawable/button_blue_primary">
+
+                    <ImageButton
+                        android:id="@+id/viewBusinessMessageBusiness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/standard_12"
+                        android:background="@drawable/ic_baseline_message_white_24"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_1"
+                android:layout_margin="@dimen/standard_5"
+                android:background="@color/colorGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_10"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Products"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewViewBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Contact Information"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headerTextSize" />
+
+            <TextView
+                android:id="@+id/viewBusinessPhoneTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/standard_5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/standard_10"
+                android:text="You"
+                android:textAlignment="gravity"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize"
+                app:drawableStartCompat="@drawable/ic_baseline_phone_24" />
+
+            <TextView
+                android:id="@+id/viewBusinessAddressTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/standard_5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/standard_10"
+                android:text="You"
+                android:textAlignment="gravity"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/viewBusinessEmailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/standard_5"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/standard_10"
+                android:text="You"
+                android:textAlignment="gravity"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize"
+                app:drawableStartCompat="@drawable/ic_baseline_email_gray_24" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

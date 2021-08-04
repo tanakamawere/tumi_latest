@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standard_5"
+        android:background="@color/colorGrayBackground"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/cancelDisplayProductButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/standard_10"
+                android:background="@drawable/ic_baseline_clear_24"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Sale Details"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headerPlusSize" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dateFinishedSaleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginTop="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Date Sold"
+            android:textColor="@color/colorLightBlue"
+            android:textSize="@dimen/headerTextSize" />
+
+        <TextView
+            android:id="@+id/nameFinishedSaleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerTextSize" />
+
+        <TextView
+            android:id="@+id/phoneFinishedSaleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/phone_number"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/normalTextSize" />
+
+        <TextView
+            android:id="@+id/numberFinishedSaleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/standard_10"
+            android:layout_marginBottom="@dimen/standard_20"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Number of Items Sold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/normalTextSize" />
+
+        <TextView
+            android:id="@+id/totalFinishedSaleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Total"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textBigSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="90">
+
+            <Button
+                android:id="@+id/optionsFinishedSaleButton"
+                style="@style/NormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="45"
+                android:background="@drawable/button_blue_primary"
+                android:text="@string/options" />
+
+            <Button
+                android:id="@+id/sendReceiptButton"
+                style="@style/NormalTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="45"
+                android:background="@drawable/button_blue_primary"
+                android:text="Send Receipt" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDisplaySoldProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "674547239072",
+    "firebase_url": "https://tumi-9ef1f.firebaseio.com",
+    "project_id": "tumi-9ef1f",
+    "storage_bucket": "tumi-9ef1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674547239072:android:643ae0a4227f9a3dc6a1c5",
+        "android_client_info": {
+          "package_name": "org.tmz.tumi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674547239072-vgebe6qmc84rik5620grbvua14s06324.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9rFgCoDHeIx_9ZCbEBDimoJ8--C7-niY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674547239072-vgebe6qmc84rik5620grbvua14s06324.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

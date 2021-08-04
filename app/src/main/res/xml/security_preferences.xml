@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Security">
+
+        <Preference
+            app:icon="@drawable/ic_baseline_edit_24"
+            app:key="editAccountInfo"
+            app:summary="Business, personal information"
+            app:title="Edit account information" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_email_gray_24"
+            app:key="changeEmail"
+            app:summary="Your sign-in email address"
+            app:title="Change Email Address" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_key_24"
+            app:key="changePassword"
+            app:title="Change Password" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_delete_gray_24"
+            app:key="deleteAccount"
+            app:summary="Once deleted, data is irrecoverable"
+            app:title="Delete Account" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

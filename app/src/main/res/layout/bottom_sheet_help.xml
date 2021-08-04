@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:gravity="center_horizontal"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Tumi in 3 easy steps"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textBigSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Step 1"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:scrollbars="vertical"
+                android:text="If you're selling products, first add stock by clicking the 'Stock Page' and clicking the '+' icon.\n\nIf you're offering a service, do the same but set the name of your service e.g Hairdresser, Plumber etc as the title and stock quantity to one."
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Step 2"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:scrollbars="vertical"
+                android:text="Whenever you make a sale, click the 'Record Sale option'."
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Step 3"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_10"
+                android:fontFamily="@font/montserrat_semibold"
+                android:scrollbars="vertical"
+                android:text="That's it, really.  "
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="A few extra things you might want to know"
+            android:textColor="@color/colorLightBlue"
+            android:textSize="@dimen/headerTextSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_semibold"
+            android:scrollbars="vertical"
+            android:text="-You can go to the 'Account Page' and personalize your information from the settings option.\n\n-You can also share your business information in case you want to give someone your details quickly."
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+</ScrollView>

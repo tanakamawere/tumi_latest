@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/advertisedCreateBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/standard_10"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/standard_10"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Advertisement"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/headerPlusSize" />
+
+        <Button
+            android:id="@+id/doneCreateTextView"
+            style="@style/BorderlessButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Done" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/advertisedOpenGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/standard_5">
+
+                <org.tmz.tumi.Utils.SquareImageView
+                    android:id="@+id/advertisedCreatePicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/camera_placeholder" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCreateAdTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="@dimen/standard_10">
+
+                    <TextView
+                        android:id="@+id/advertisedCreateTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="John Doe"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/textBigSize" />
+
+                    <TextView
+                        android:id="@+id/advertisedCreatePriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Example"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerPlusSize" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/instructionCreateTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Select an image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/textBigSize" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCreateAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTagsCreateAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/chipTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_12"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Select product category"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <Spinner
+                    android:id="@+id/advertisedCategoryAutoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_20"
+                    android:layout_marginEnd="@dimen/standard_20"
+                    android:layout_marginBottom="@dimen/standard_20"
+                    android:padding="@dimen/standard_5" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/advertiseTagsCreateEditTextLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/standard_10"
+                    android:layout_marginEnd="20dp"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:helperText="Separate tags by typing a comma ( , )"
+                    app:helperTextEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/advertisedTagCreateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Add tags"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/advertiseDescriptionCreateEditTextLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/standard_10"
+                    android:layout_marginEnd="20dp"
+                    android:scrollbarSize="@dimen/standard_20"
+                    android:scrollbars="vertical"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/advertisedDescriptionCreateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:hint="Add description"
+                        android:inputType="textMultiLine"
+                        android:lines="1"
+                        android:maxLines="2"
+                        android:minLines="1"
+                        android:scrollbarSize="@dimen/standard_20"
+                        android:scrollbars="vertical"
+                        android:singleLine="false"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_1"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/normalTextSize"
+                        android:layout_marginEnd="@dimen/standard_20"
+                        android:layout_marginBottom="@dimen/normalTextSize"
+                        android:src="@drawable/ic_baseline_address_24" />
+
+                    <TextView
+                        android:id="@+id/advertisedCreateBusinessNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="examplebusiness@eg.com"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/normalTextSize"
+                        android:layout_marginEnd="@dimen/standard_20"
+                        android:layout_marginBottom="@dimen/normalTextSize"
+                        android:src="@drawable/ic_baseline_phone_24" />
+
+                    <TextView
+                        android:id="@+id/advertisedCreatePhoneTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="+1 (012) 345 6789"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/normalTextSize"
+                        android:layout_marginEnd="@dimen/standard_20"
+                        android:layout_marginBottom="@dimen/normalTextSize"
+                        android:src="@drawable/ic_baseline_location_on_24" />
+
+                    <TextView
+                        android:id="@+id/advertisedCreateAddressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:maxLines="2"
+                        android:text="Example Address"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

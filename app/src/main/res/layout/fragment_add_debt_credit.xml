@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAddDC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorGrayBackground"
+                app:title="">
+
+                <TextView
+                    style="@style/ToolbarTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Debt/Credit"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <Spinner
+            android:id="@+id/moneyTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_20"
+            android:layout_marginBottom="@dimen/standard_20"
+            android:padding="@dimen/standard_5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addDCNameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_10"
+            android:layout_marginTop="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addDCNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addDCNumberInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_10"
+            android:layout_marginTop="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_10"
+            app:helperText="Format: +263 12 345 6789">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addDCNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addDCAmountInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_10"
+            android:layout_marginTop="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_10"
+            app:prefixText="$">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addDCAmountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Amount"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_10"
+            android:layout_marginTop="@dimen/standard_20"
+            android:layout_marginEnd="@dimen/standard_10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addDCDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                android:editable="false"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Due Date"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/addDCButton"
+            style="@style/NormalTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_blue_primary"
+            android:text="@string/button_string_confirm" />
+
+    </LinearLayout>
+
+</ScrollView>

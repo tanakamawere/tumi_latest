@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutSaleCart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".Finances.SaleCartActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarStock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayBackground"
+            app:title="">
+
+            <TextView
+                style="@style/ToolbarTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sale"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/standard_1"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginEnd="@dimen/standard_1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSaleCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/standard_1"
+            app:cardBackgroundColor="@color/colorBackground"
+            app:cardElevation="@dimen/standard_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Options"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/dropDownSaleCartButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSaleCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/add_customer_details_optional"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/customerNameCartEditTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColorHint="@color/colorPrimaryDark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/customerNameCartEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            android:textSize="@dimen/normalTextSize"
+                            tools:ignore="HardcodedText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/customerPhoneNumberCartEditTextLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textColorHint="@color/colorPrimaryDark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/customerPhoneNumberCartEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="@string/phone_number"
+                            android:inputType="phone"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/normalTextSize" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:layout_marginTop="@dimen/standard_10"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/checkout"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <ImageButton
+                        android:id="@+id/dropDownCheckOutButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/standard_5"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCheckOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Currency"
+                            android:textColor="@color/colorLightBlue"
+                            android:textSize="@dimen/headerTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/standard_20"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/moneyValuesPlaceHolder"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerTextSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/standard_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Payment Form"
+                            android:textColor="@color/colorLightBlue"
+                            android:textSize="@dimen/headerTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/standard_20"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/moneyValuesPlaceHolder"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/headerTextSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/standard_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Total"
+                        android:textColor="@color/colorLightBlue"
+                        android:textSize="@dimen/headerTextSize" />
+
+                    <TextView
+                        android:id="@+id/saleCartTotalPriceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/standard_20"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/moneyValuesPlaceHolder"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/homeAmounts" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/saleCartBtn"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button_blue_primary"
+                    android:text="@string/button_string_confirm"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

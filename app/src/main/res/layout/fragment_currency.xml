@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarStock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrayBackground"
+            app:title="">
+
+            <TextView
+                style="@style/ToolbarTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currencies"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_10"
+        android:layout_marginTop="@dimen/standard_10"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Against the USD$"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/headerTextSize" />
+
+    <TextView
+        android:id="@+id/dashboardStatsDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_10"
+        android:layout_marginBottom="@dimen/standard_10"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="USD$ 1 is worth..."
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/normalTextSize" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Linear Layout for viewing the exchange rates-->
+        <LinearLayout
+            android:id="@+id/linearLayoutCurrencyViewER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_20"
+                android:layout_marginEnd="@dimen/standard_20"
+                android:layout_marginBottom="@dimen/standard_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Showing for"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <Spinner
+                    android:id="@+id/whichRateSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standard_20"
+                    android:layout_marginEnd="@dimen/standard_20"
+                    android:layout_marginBottom="@dimen/standard_20"
+                    android:padding="@dimen/standard_5" />
+
+                <TextView
+                    android:id="@+id/fragmentCurrencyExchangeHouseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Exchange House"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_5"
+                android:layout_marginEnd="@dimen/standard_5"
+                android:layout_marginBottom="@dimen/standard_5"
+                android:background="@drawable/dashboard_info_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_5"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/currencyTumiDefaultTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/moneyValuesPlaceHolder"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <TextView
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Tumi Default Currency"
+                    android:textColor="@color/colorLightBlue"
+                    android:textSize="@dimen/headerTextSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_5"
+                android:layout_marginEnd="@dimen/standard_5"
+                android:layout_marginBottom="@dimen/standard_5"
+                android:background="@drawable/dashboard_info_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_5"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/currencyRandTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/moneyValuesPlaceHolder"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <TextView
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/randLabel"
+                    android:textColor="@color/colorLightBlue"
+                    android:textSize="@dimen/headerTextSize" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_5"
+                android:layout_marginEnd="@dimen/standard_5"
+                android:layout_marginBottom="@dimen/standard_5"
+                android:background="@drawable/dashboard_info_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_5"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/currencyZWLTextView"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/moneyValuesPlaceHolder"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/headerTextSize" />
+
+                <TextView
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/zwlLabel"
+                    android:textColor="@color/colorLightBlue"
+                    android:textSize="@dimen/headerTextSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Linear layout for setting the exchange rates-->
+        <LinearLayout
+            android:id="@+id/linearLayoutCurrencySetER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/resetSetCurrencies"
+                style="@style/BorderlessButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Reset"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/headerTextSize" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_10"
+                android:layout_marginEnd="@dimen/standard_10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/randSetEREditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/randLabel"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_10"
+                android:layout_marginEnd="@dimen/standard_10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/zwlSetEREditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/zwlLabel"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalTextSize" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_10"
+                android:layout_marginEnd="@dimen/standard_10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tumiDefaultSetEREditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/fbTumiDefault"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/normalTextSize" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/confirmSetER"
+                style="@style/NormalTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/standard_10"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_blue_primary"
+                android:text="@string/button_string_confirm" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

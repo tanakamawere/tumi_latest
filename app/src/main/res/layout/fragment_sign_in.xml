@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayoutEnterApp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/appLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/gray_background"
+            android:orientation="vertical"
+            android:transitionName="@string/logoTransition">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/appName"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/logoSizeTumi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-24dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/appNameSubtext"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/subtitleTumi" />
+
+            <TextView
+                android:id="@+id/signInSelector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/standard_20"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/signIn"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/deleteDataNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/standard_20"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Please make sure you have deleted all requests and publicized products"
+            android:textAlignment="center"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/headerTextSize" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signInEmailAddressEditTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/standard_10"
+            android:layout_marginEnd="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enterAppEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/emailAddress"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signInPasswordEditTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/standard_10"
+            android:layout_marginEnd="20dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enterAppPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/normalTextSize" />
+
+            <TextView
+                android:id="@+id/forgotPasswordPrompterSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/standard_5"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Forgot Password?"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/headerTextSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/NormalTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/standard_10"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_blue_primary"
+            android:text="@string/signIn" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-14dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Don't have an account?"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/normalTextSize"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/signInCreateAccountButton"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/signUp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/normalTextSize"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
